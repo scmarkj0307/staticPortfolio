@@ -1,0 +1,246 @@
+.modalBackground {
+    z-index: 2;
+    width: 1000px;
+    height: 600px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modalContainer {
+    z-index: 2;
+    width: 500px;
+    height: 450px;
+    border-radius: 12px;
+    /* background: linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8) 45%,
+      rgba(0, 0, 0, 0.9) 45%,
+      rgba(0, 0, 0, 0.9)
+    );
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    color: white; /* Set text color to white */
+  }
+
+  .modalContainer .title {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    top: -2rem;
+    font-family: 'Courier New', Courier, monospace; /* Use a monospaced font for a hacker feel */
+    animation: hackerText 3s infinite alternate; /* Adjust the duration and timing as needed */
+  }
+
+  @keyframes hackerText {
+    0% {
+      letter-spacing: 4px;
+      opacity: 0.8;
+    }
+    100% {
+      letter-spacing: 0;
+      opacity: 1;
+    }
+  }
+  
+  .titleCloseBtn {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+    width: 30px;
+    border-radius: 50%;
+    position: relative;
+    left: 95%;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+
+  
+  .body {
+      width: 250px;
+      height: 250px;
+      position: relative;
+      top: -1rem;
+      left: 8rem;
+      margin-bottom: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 6px solid transparent;
+      box-sizing: border-box;
+      border-radius: 50%;
+      transition: border-color 0.3s ease-in-out;
+      animation: borderAnimation 2s infinite alternate;
+      background-color: black;
+    }
+
+    .body.startAnimation {
+      border-color: #22d3ee;
+    }
+
+    @keyframes borderAnimation {
+      0% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+
+  
+  .imageContainer {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    filter: brightness(110%) contrast(130%) saturate(120%) grayscale(10%);
+    transition: filter 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+
+    
+  }
+
+  .imageContainer img{
+    background-color: black;
+  }
+  
+  
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+ 
+
+  .footer button {
+    width: 200px;
+    height: 50px;
+    color: black;
+    font-weight: 700;
+    border-radius: 0;
+    text-transform: uppercase;
+    margin: 25px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.footer button::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent,
+            #B7ADA1, transparent);
+    transform: translateX(-100%);
+    transition: 0.6s;
+    position: absolute;
+}
+
+.footer button:hover {
+    background: transparent;
+    box-shadow: 0 0 20px 5px #B7ADA1;
+    color:white ;
+}
+
+.footer button:hover::before {
+    transform: translateX(100%);
+}
+
+
+
+/* 2nd button     Follow - @codewith_muhilan */
+.footer button:nth-child(2) {
+    border: 1px solid #B7ADA1;
+}
+
+.footer button:nth-child(2)::before {
+    background: linear-gradient(120deg, transparent, #B7ADA1, transparent);
+}
+
+.footer button:nth-child(2):hover {
+    box-shadow: 0 0 20px 5px #B7ADA1;
+}
+
+
+@media(max-width: 700px){
+  .modalContainer{
+    width: 400px;
+    height: 350px;
+
+  }
+
+  .modalContainer .title{
+    font-size: 0.5rem;
+  }
+
+  .modalContainer .body{
+    margin-left: -3rem;
+  }
+}
+
+
+@media(max-width: 500px){
+  .modalContainer{
+    width: 300px;
+    height: 350px;
+ 
+
+  }
+
+  .modalContainer .title{
+    font-size: 0.5rem;
+  }
+
+  .modalContainer .body{
+    margin-left: -6rem;
+  }
+
+  .footer button {
+    font-weight: 400;
+  }
+}
+
+@media(max-width: 400px){
+  .modalContainer{
+    width: 200px;
+    height: 400px;
+
+  }
+
+  .modalContainer .title{
+    font-size: 0.5rem;
+  }
+
+  .modalContainer .body{
+    margin-left: -10rem;
+  }
+
+  .footer button {
+    font-weight: 400;
+    font-size: 0.4rem;
+
+  }
+}

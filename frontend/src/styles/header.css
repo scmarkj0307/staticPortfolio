@@ -1,0 +1,155 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 80px;
+    backdrop-filter: blur(10px); /* Adjust the blur as needed for the glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow for depth */
+    background-color: #B7ADA1 ; /* Use an rgba color with alpha for transparency */
+    z-index: 1000; /* Ensure it's above other elements on the page */
+    height: 1rem;
+  }
+  
+
+.myNickName{
+    font-size: 1.5rem;
+    margin-left: -2rem;
+    margin-right: 2rem;
+    letter-spacing: 10px;
+    color: #0e3742;
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    line-height: 0.70em;
+    outline: none;
+    /* animation: animate 5s linear infinite; */
+
+}
+
+@media screen and (max-width: 600px) {
+  .myNickName {
+    font-size: 1.5rem; /* Adjust the font size for smaller screens */
+    letter-spacing: 5px; /* Adjust the letter spacing for smaller screens */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .myNickName {
+    font-size: 1rem; /* Adjust the font size for smaller screens */
+    letter-spacing: 5px; /* Adjust the letter spacing for smaller screens */
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .myNickName {
+    font-size: 0.5rem; /* Adjust the font size for smaller screens */
+    letter-spacing: 5px; /* Adjust the letter spacing for smaller screens */
+  }
+}
+
+
+
+/* @keyframes animate {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90%,92.1%,100%{
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+        0 0 20px #03bcf4,
+        0 0 40px #03bcf4,
+        0 0 80px #03bcf4,
+        0 0 160px #03bcf4;
+    }
+    
+} */
+
+#list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+#list li .nav-link {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+  right: 14rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: black;
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+#list li .nav-link:hover{
+  color: white;
+}
+
+
+#mobileView{
+  display: none;
+}
+
+#mobileView i {
+  color: black;
+  align-items: center;
+}
+
+@media screen and (max-width:1100px) {
+
+  .nav{
+    height: 15px;
+  }
+
+  #list {
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    top: 50px;
+    right: -350px;
+    width: 300px;
+    height: 100vh;
+    background: rgba(14, 55, 66, 0.8); /* Use rgba for a transparent background */
+    backdrop-filter: blur(10px); /* Apply a blur effect for a glassy look */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adjust the box-shadow for a subtle lift */
+    padding: 20px; /* Adjust padding as needed */
+    padding-top: 4rem;
+    transition: 0.3s ease-in-out;
+  }
+
+  #list.active {
+    right: 0;
+    margin-right: 9rem;
+    
+  }
+
+  #list li {
+    margin-bottom: 6rem;
+  }
+
+  #list li .nav-link {
+    color: #fff;
+    right: 0;
+  }
+
+  #mobileView{
+    display: block;
+  }
+
+  #mobileView i{
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    right: 8.5rem; 
+  }
+  
+}

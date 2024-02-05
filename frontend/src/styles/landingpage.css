@@ -1,0 +1,1207 @@
+/*BODY STYLING*/
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scrollbar-color: black #0c192c; /* thumb and track color */
+    scrollbar-width: thin; /* width of the scrollbar */
+  
+  }
+  /* Change the color of the scrollbar */
+  body::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #b7ada1; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Border radius of the thumb */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: black; /* Color of the scrollbar track */
+  }
+  
+  
+  /*CURSOR STYLING*/
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to go through the cursor */
+    z-index: 999; /* Set a   high z-index to make sure it's on top */
+  }
+  
+  .cursor-btn{
+    position: absolute;
+    top:-20px;
+    right: 10px;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #000000;
+    border: none;
+    transition: box-shadow 0.3s; /* Add a smooth transition effect */
+  }
+  
+  .cursor-btn:hover {
+    box-shadow: 0 0 20px cyan; /* Increase the shadow size on hover */
+  }
+  
+  .cursor-content{
+    display: flex;
+    flex-direction: column;
+    color: #b7ada1;
+  }
+  
+  .cursor-content p {
+    font-size: 10px;
+  }
+  
+  
+  
+  
+  /*MAIN CONTENTS STYLING-----------------------------------------------------------------------------------------------*/
+  
+  .mainContents {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+      left: 0;
+      right: 0;
+      background-color: #050801;
+      margin: 0;
+      overflow: hidden;
+      scroll-snap-type: y mandatory;
+    }
+  
+  
+  
+  
+  /*HOME CONTAINER STYLING-----------------------------------------------------------------------------------------------*/
+  
+    .homeContainer {
+      scroll-snap-align: center;
+      position: relative;
+      min-height: 1000PX;
+      justify-content: center;
+      align-items: center;
+      top: 3rem;
+      z-index: 1;
+      padding-left: 2rem;
+      display: grid;
+      /* background-image: url('../Assets/BackgroundImages/bg.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover; */
+      background: radial-gradient(circle at center, #292b2c, #000000);
+      grid-template-rows: repeat(3, minmax(min-content, 15rem));
+      grid-template-columns: repeat(6, minmax(min-content, 1fr)); /* Adjusted grid-template-columns */
+      grid-template-areas:
+        'c1 c1 c1 c3 c3 c3'
+        'c2 c2 c2 c3 c3 c3'
+        'c4 c4 c4 c3 c3 c3';
+    }
+  
+    .c-1 {
+      grid-area: c1;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .myTechStack {
+      position: relative;
+      top: 50px;
+      display: flex;
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .myTechStack h1 {
+      font-size: 3rem;
+      margin-left: 1.5rem;
+      letter-spacing: 10px;
+      color: #0e3742;
+      text-transform: uppercase;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+      line-height: 1;
+      outline: none;
+      animation: animate1 5s linear infinite;
+    }
+    
+    @keyframes animate1 {
+      0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90%, 92.1%, 100% {
+        color: #0e3742;
+        text-shadow: none;
+      }
+      18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4,
+          0 0 20px #03bcf4,
+          0 0 40px #03bcf4,
+          0 0 80px #03bcf4,
+          0 0 160px #03bcf4;
+      }
+    }
+    
+    .myTechStack h2 {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      color: white;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+   
+    .c-2 {
+      grid-area: c2;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    }
+    .typingGreetings {
+      position: relative;
+      top: 4rem;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 45px;
+      margin-left: 1rem;
+      width: 100%;
+     
+    }
+  
+    .c-3 {
+      grid-area: c3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      bottom: 2rem;
+      right: 5rem;
+      width: 100%;
+  
+    }
+    .myDpContainer {
+      grid-area: c3;
+      width: 450px;
+      height: 450px;
+      margin-top: 2rem;
+      position: relative;
+      left: 2rem;
+    }
+    
+    .myDpContainer::before {
+      content: "";
+      position: absolute;
+      margin-left: 4rem;
+      margin-top: 4rem;
+      width: 100%;
+      height: 100%;
+      border: 6px solid transparent;
+      box-sizing: border-box;
+      border-radius: 50%;
+      transition: border-color 0.3s ease-in-out;
+    }
+    
+    .myDpContainer.startAnimation::before {
+      border-color: #B7ADA1 ;
+      animation: borderAnimation 3s infinite alternate;
+    }
+    
+    @keyframes borderAnimation {
+      0% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+  
+    
+    .myPic {
+      position: relative;
+      margin-top: 5.5rem;
+      width: 400px;
+      height: 400px;
+      object-fit: contain;
+      filter: brightness(110%) contrast(130%) saturate(120%) grayscale(10%);
+      transition: filter 0.3s ease-in-out;
+      cursor: pointer;
+      background-color: black;
+      border-radius: 50%;
+      margin-left: 5.5rem;
+      margin-bottom: 4rem;
+      
+    }
+  
+   
+    
+    .c-4 {
+      grid-area: c4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      
+    }
+  
+    .button{
+      position: relative;
+      margin-left: 1rem;
+      justify-content: center;
+      align-items: center;
+      display: inline-block;
+      padding: 25px 30px;
+      color: #03e9f4;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.5s;
+      letter-spacing: 4px;
+      overflow: hidden;
+      margin-right: 20px;
+      height: fit-content;
+  }
+  
+  .button:hover {
+      background: #03e9f4;
+      color: #050801;
+      box-shadow: 0 0 5px #03e9f4,
+          0 0 25px #03e9f4,
+          0 0 50px #03e9f4,
+          0 0 200px #03e9f4;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  }
+  
+  
+  
+  
+  
+  /*HOME CONTAINER MEDIA -----------------------------------------------------------------------------------------------*/
+  
+  /*1200PX*/
+  @media (max-width: 1200px) {
+  
+    .myDpContainer {
+      width: 350px;
+      height: 350px;
+      position: relative;
+      
+    }
+  
+    .myPic {
+        width: 300px;
+        height: 300px;
+    }
+  
+    .cursor-btn {
+      display: none;
+    } 
+  }
+  
+  /*1000PX*/
+  @media (max-width:1000px){
+    .homeContainer{
+        margin-left: -2.5rem;
+        grid-template-columns: repeat(3, minmax(min-content, 15rem));
+        grid-template-rows: repeat(5, minmax(min-content, 1fr)); /* Adjusted grid-template-columns */
+        grid-template-areas:
+        'c1 c1 c1'
+        'c3 c3 c3'
+        'c3 c3 c3'
+        'c2 c2 c2'
+        'c4 c4 c4';
+      }
+  
+      
+      .c-3{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -2rem;
+        right: 8rem;
+        bottom: 10rem;
+        left: -6rem;
+      }
+  
+      .c-2{
+        position: relative;
+      }
+  
+      .c-4{
+        position: relative;
+      }
+    }
+  
+  
+  
+    /*900PX*/
+    @media (max-width:900px){
+      .typingGreetings{
+        width: 80%;
+      }
+    }
+  
+  
+    /*650PX*/
+    @media (max-width:650px){
+  
+      
+      .c-4 {
+        flex-direction: column;
+        top: -2rem;
+      }
+  
+    }
+  
+  
+    /*600PX*/
+    @media (max-width:600px){
+  
+      .myTechStack{
+        width: 300px;
+      }
+  
+      .typingGreetings{
+        width: 400px;
+        font-size: 2rem;
+        top: -2rem;
+      }
+    }
+  
+    /*450PX*/
+    @media (max-width: 450px) {
+  
+      .c-3{
+        top: -12rem;
+      }
+  
+      .myDpContainer {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        top: 2.5rem;
+        
+      }
+    
+      .myPic {
+          width: 200px;
+          height: 200px;
+      }
+  
+      .c-2{
+        position: relative;
+        top: -10rem;
+      }
+  
+      
+      .c-4 {
+        flex-direction: column;
+        top: -14rem;
+      }
+  
+    }
+  
+  
+    /*400PX*/
+    @media (max-width:400px){
+      .typingGreetings{
+        top: 0;
+        width: 300px;
+        font-size: 1.5rem;
+      }
+    }
+  
+  
+  
+  /*ABOUT CONTAINER STYLING (SAMPLE WORKS) -----------------------------------------------------------------------------------------------*/
+  
+    .aboutContainer {
+      scroll-snap-align: center;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      background: linear-gradient(to bottom, black, #0c192c);
+      min-height: 1000PX;
+      
+      
+    }
+  
+    
+    .a-1 {
+      grid-area: a1;
+      margin-left: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 300px;
+      max-width: 700px;
+      height: 550px;
+      padding-bottom: 4rem;
+      padding-top: 2rem;
+      background-color: #B7ADA1;
+      background: rgba(183, 173, 161, 0.4); /* Adjust the alpha (last) value for transparency */
+      backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+      border-radius: 10px; /* Optional: add border-radius for rounded corners */
+      margin-top: 2rem;
+    }
+    
+    
+    .a-2 {
+      z-index: -1;
+      grid-area: a2;
+      margin-left: 4rem;
+      margin-right: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-width: 300px;
+      max-width: 700px;
+      height: 550px;
+      padding-bottom: 4rem;
+      padding-top: 2rem;
+      background-color: #B7ADA1;
+      background: rgba(183, 173, 161, 0.4); /* Adjust the alpha (last) value for transparency */
+      backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+      border-radius: 10px; /* Optional: add border-radius for rounded corners */
+      margin-top: 2rem;
+    }
+  
+  
+    .swcarousel-container {
+      top: 1.7rem;
+      position: relative;
+      margin: 0 auto;
+      width: 550px;
+      height: 300px; /* Set a fixed height */
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Add a box shadow for the floating effect */
+    }
+    
+    .swcarousel-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Use 'cover' to make sure the image covers the entire container */
+    }
+  
+  .swcarouselLabel{
+    position: relative;
+    color: black;
+    top: 2.5rem;
+  }
+  
+  .swcarouselButton {
+    position: relative;
+    top: 3rem;
+    cursor: pointer;
+  
+  }
+  
+  .svg-wrapper {
+    margin-top: 0;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 3px;
+    margin-left: 5px;
+    margin-right: 5px
+  }
+  
+  
+    #shape {
+      stroke-width: 6px;
+      fill: transparent;
+      stroke: #06D6A0;
+      stroke-dasharray: 85 400;
+      stroke-dashoffset: -220;
+      transition: 1s all ease;
+    }
+    #text {
+      margin-top: -35px;
+      text-align: center;
+    }
+    #text a {
+      color: white;
+      text-decoration: none;
+      font-weight: 100;
+      font-size: 1.1em;
+    }
+  
+  .svg-wrapper:hover #shape {
+    stroke-dasharray: 50 0;
+    stroke-width: 3px;
+    stroke-dashoffset: 0;
+    stroke: #00fffc;
+  }
+  
+  .swcarouselDescription{
+    color: white  ;
+    margin: 0.3rem 3.5rem;
+    font-size: 1rem;
+  }
+  
+  
+  .picarousel-container {
+      top: 1.7rem;
+      position: relative;
+      margin: 0 auto;
+      width: 600px;
+      height: 300px; /* Set a fixed height */
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Add a box shadow for the floating effect */
+  } 
+  
+  .picarouselLabel{
+    position: relative;
+    top: 2.5rem;
+    color: black;
+  }
+  
+  .picarouselButton {
+    position: relative;
+    top: 3rem;
+  
+  }
+  
+  .picarouselDescription{
+    color: white  ;
+    margin: 0.5rem 3.5rem;
+    font-size: 1rem;
+  }
+  
+  
+  
+  .black {
+    color: cyan;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #text a{
+    color: cyan;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 1.1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /*ABOUT CONTAINER MEDIA (SAMPLE WORKS)---------------------------------------------------------------------------------------- */
+  
+  /*1404PX*/
+  @media (max-width:1404px) {
+    .swcarousel-container {
+      width: 350px;
+      height: 200px; /* Set a fixed height */
+    }
+    
+    .swcarousel-container img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  
+    .picarousel-container {
+      width: 350px;
+      height: 200px; /* Set a fixed height */
+    }
+    
+    .picarousel-container img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  
+  
+  }
+  
+  
+  /*1200PX*/
+  @media (max-width:1200px) {
+    .swcarousel-container {
+      width: 400px;
+      height: 200px; /* Set a fixed height */
+    }
+    
+    .swcarousel-container img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  
+    .picarousel-container {
+      width: 400px;
+      height: 200px; /* Set a fixed height */
+    }
+    
+    .picarousel-container img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  
+  
+  }
+  
+  
+  /*1000PX*/
+  @media (max-width:1000px) {
+    .swcarousel-container {
+      width: 350px;
+      height: 200px; /* Set a fixed height */
+    }
+    
+    .swcarousel-container img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  
+    .swcarouselDescription{
+      font-size: 1rem;
+    }
+  
+    .picarousel-container {
+      width: 350px;
+      height: 200px; /* Set a fixed height */
+    }
+    
+    .picarousel-container img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  
+    .picarouselDescription{
+      font-size: 1rem;
+    }
+  
+  
+  }
+  
+  /*900px*/
+  @media (max-width: 900px) {
+    .aboutContainer {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+  
+    .a-1{
+      margin-right: 3.5rem;
+    }
+  
+    .a-2{
+      margin-bottom: 4rem;
+    }
+  
+  }
+  
+  
+  /*600px*/
+  @media (max-width: 600px){
+    .swcarouselDescription{
+      font-size: 0.8rem;
+    }
+  
+    .picarouselDescription{
+      font-size: 0.8rem;
+    }
+
+    .swcarouselLabel h1{
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+
+    .picarouselLabel h1{
+      font-size: 1.5rem;
+      padding-bottom: 1rem;
+    }
+  
+  
+  }
+  
+  
+  /*482px*/
+  @media (max-width:482px) {
+    .swcarousel-container {
+      width: 300px;
+      height: 150px; /* Set a fixed height */
+    }
+    
+    .swcarousel-container img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  
+    .picarousel-container {
+      width: 300px;
+      height: 150px; /* Set a fixed height */
+    }
+    
+    .picarousel-container img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  
+  }
+
+    /*482px*/
+    @media (max-width:432px) {
+      .swcarousel-container {
+        width: 250px;
+        height: 130px; /* Set a fixed height */
+      }
+      
+      .swcarousel-container img {
+        width: 100%;
+        height: 100%;
+        
+      }
+    
+      .picarousel-container {
+        width: 250px;
+        height: 130px; /* Set a fixed height */
+      }
+      
+      .picarousel-container img {
+        width: 100%;
+        height: 100%;
+        
+      }
+    
+    }
+  
+  
+  
+  
+  /*CONTACT CONTAINER STYLING (Contact Me!!)---------------------------------------------------------------------------------------- */
+  
+  .contactContainer {
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    min-height: 1000PX;
+    width: 100%;
+    background-color: #0c192c;
+    overflow: hidden;
+    
+  }
+  
+  
+  .cContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .cc1{
+    position: relative;
+  
+  }
+  
+  .cc2{
+    position: relative;
+    min-width: 800px;
+    min-height: 450px;
+    z-index: 2;
+  
+    
+  }
+  
+  .cc2 .contactInfo{
+    z-index: 1;
+    position: absolute;
+    top: 40px;
+    width: 250px;
+    height: 300px;
+    background: #095a55;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10%;
+  
+  }
+  
+  .infoContainer{
+    position: relative;
+    top: -2rem;
+  }
+  
+  .infoContainer .info{
+    right: 3rem;
+  }
+  
+  .contactInfo h2{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  
+  .info{
+    position: relative;
+    margin: 20px 0 ;
+  
+  }
+  .info li {
+    position: relative;
+    left: -1rem;
+    list-style: none;
+    display: flex;
+    margin: 25px 0 ;
+    cursor: pointer;
+    align-items: flex-start;
+    color: #B7ADA1;
+  }
+  
+  .info li img {
+    width: 30px;
+    min-width: 30px;
+    margin-right: 1rem;
+    filter: invert(1)
+  }
+  
+  
+  .cc2 .contactForm {
+    flex: 1;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: 500px;
+    height: 350px;
+    background-color: #B7ADA1;
+    background: rgba(183, 173, 161, 0.4); /* Adjust the alpha (last) value for transparency */
+    backdrop-filter: blur(10px); /* Adjust the blur value as needed */
+    border-radius: 20px; /* Add border-radius for rounded corners */
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.25);
+  }
+  
+  
+  .contactForm h2{
+    color: #08a88a;
+    font-size: 24px;
+    font-weight: 500;
+    position: relative;
+    bottom: 2rem;
+  }
+  
+  
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: -2rem;
+  }
+  
+  /* Apply styles to the input fields */
+  .form-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 50px;
+  }
+  
+  /* Apply styles to the textarea */
+  .form-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical; /* Allow vertical resizing of the textarea */
+    height: 100px;
+  }
+  
+  /* Apply styles to the submit button */
+  .form-submit {
+    background-color: #095a55; /* Green background color */
+    color: white;
+    padding: 1rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 400px;
+  }
+  
+  /* Change the submit button color on hover */
+  .form-submit:hover {
+    background-color: #B7ADA1;
+  }
+  
+  
+  .cc3{
+    position: relative;
+  }
+  
+  .cc2 p {
+    color: #B7ADA1;
+    position: relative;
+    left: 4rem;
+    top: 1rem;
+  }
+  
+  
+  
+  .bubbles{
+    position: absolute;
+    display: flex;
+    z-index: -1;
+  }
+  
+  .bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #B7ADA1;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #B7ADA1, 0 0 100px #B7ADA1;
+    animation: animateBubbles 15s linear infinite;
+    animation-duration: calc(125s / var(--i));
+  }
+   
+  @keyframes animateBubbles{
+    0%
+    {
+      transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+      transform: translateY(-10vh) scale(1);
+    }
+  }
+  
+  /* Specify the font family for input and textarea */
+  .inputBox input,
+  .inputBox textarea,
+  .form-input,
+  .form-textarea {
+    font-family: 'Roboto', sans-serif;
+   /* Replace 'Your-Font-Family' with the desired font family */
+  }
+  
+  /* Optionally, you can set a specific font size */
+  .inputBox input,
+  .form-input,
+  .form-textarea {
+    font-size: 16px; /* Adjust the font size as needed */
+  }
+  
+  
+  /*CONTACT CONTAINER MEDIA (Contact Me!!)---------------------------------------------------------------------------------------- */
+  
+  @media (max-width: 1200px) {
+    .cc2 {
+      min-width: auto;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .cc2 .contactInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 1.5rem;
+      padding: 20px;
+      z-index: -1;
+    }
+  
+    .cc2 .contactForm {
+      padding-left: 2rem;
+      margin-left: 0;
+      width: 100%;
+      height: auto;
+      border-radius: 0%;
+    }
+  
+    .cc2 .contactForm h2 {
+      bottom: 3rem;
+    }
+  
+    .inputBox {
+      margin-bottom: 30px;
+      
+    }
+
+    .cc3{
+      margin-left: 5rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .contactContainer {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .cContainer{
+      flex-direction: column;
+      margin-left: -4rem;
+    }
+    .cc2 .contactInfo{
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cc1{
+      margin-left: 5.5rem;
+    }
+    
+  }
+  
+  @media (max-width: 650px) {
+    .cContainer {
+     margin-left: -5rem;
+    }
+  
+  }
+  
+  @media (max-width: 600px) {
+    .inputBox input,
+    .inputBox textarea {
+      margin-bottom: 10px; /* Adjust the margin as needed */
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .cc2 .contactInfo{
+      min-width: 200px;
+      min-height: 250px;
+    }
+  
+    .form-container{
+      width: 300px;
+    }
+    
+    .form-submit{
+      width: 300px;
+    }
+    .contactForm h2{
+      margin-left: 1.5rem;
+    }
+
+    .info li {
+    left: 1rem;
+    }
+  
+  
+    
+  }
+  
+  
+  @media (max-width: 370px) {
+    .infoContainer h2{
+     margin-left: 3rem;
+    } 
+  
+    .form-container{
+      width: 200px;
+    }
+  
+    .form-submit{
+      width: 200px;
+    }
+  
+    .contactForm h2{
+      margin-left: 5rem;
+    }
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  /*LODING SCREEN STYLING-------------------------------------------------------------------------------------*/
+  .loading-screen{
+    background: radial-gradient(circle at center, #292b2c, #000000);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .loader {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background-image:
+      linear-gradient(#029791  26px, transparent 0) ,
+      linear-gradient(#B7ADA1  26px, transparent 0) ,
+      linear-gradient(#078ab3  26px, transparent 0) ,
+      linear-gradient(#3D5872  26px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left top , left bottom , right top , right bottom;
+    animation: rotate 1s linear infinite;
+  }
+  @keyframes rotate {
+    0% {
+      width: 74px;
+      height: 74px;
+      transform: rotate(0deg)
+    }
+    50% {
+      width: 40px;
+      height: 40px;
+      transform: rotate(180deg)
+    }
+    100% {
+      width: 74px;
+      height: 74px;
+      transform: rotate(360deg)
+    }
+  }

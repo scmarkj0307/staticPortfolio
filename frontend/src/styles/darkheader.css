@@ -1,0 +1,116 @@
+.navDark {
+    position: fixed;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 23px 80px;
+    backdrop-filter: blur(10px); /* Adjust the blur as needed for the glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow for depth */
+    background-color: #B7ADA1 ; /* Use an rgba color with alpha for transparency */
+    z-index: 1000; /* Ensure it's above other elements on the page */
+    height: 1rem;
+
+  }
+  
+
+.myNickNameDark{
+    position: relative;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    color: #0e3742;
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    line-height: 0.70em;
+    outline: none;
+    animation: animateNickname 5s linear infinite;
+    cursor: pointer;
+
+}
+
+
+@keyframes animateNickname {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90%,92.1%,100%{
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color: cyan;
+        text-shadow: 0 0 10px #B7ADA1,
+        0 0 20px  #B7ADA1,
+        0 0 40px  #B7ADA1,
+        0 0 80px  #B7ADA1,
+        0 0 160px #B7ADA1;
+    }
+    
+}
+
+
+.darkBack{
+   position: relative;
+   right: 10rem;
+ 
+}
+
+.darkBack h1{
+    position: relative;
+    font-size: 1.5rem;
+    letter-spacing: 10px;
+    color: #0e3742;
+    text-transform: uppercase;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+    line-height: 0.70em;
+    outline: none;
+    animation: animateNickname 5s linear infinite;
+    cursor: pointer;
+
+}
+
+
+@media screen and (max-width: 750px) {
+    .myNickNameDark {
+      font-size: 1.5rem; /* Adjust the font size for smaller screens */
+      letter-spacing: 5px; /* Adjust the letter spacing for smaller screens */
+      margin-left: -3rem;
+    }
+
+    .darkBack h1{
+    font-size: 1.5rem; /* Adjust the font size for smaller screens */
+    letter-spacing: 5px; /* Adjust the letter spacing for smaller screens */
+    margin-right: -5rem;
+    }
+  }
+  
+  @media screen and (max-width: 500px) {
+    .myNickNameDark {
+    font-size: 1rem; /* Adjust the font size for smaller screens */
+ 
+    }
+
+    .darkBack h1 {
+    font-size: 1rem; /* Adjust the font size for smaller screens */
+    
+      }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .myNickNameDark {
+      font-size: 1rem; /* Adjust the font size for smaller screens */
+    }
+    .darkBack h1 {
+        font-size: 1rem; /* Adjust the font size for smaller screens */
+        
+          }
+  }
+  
+
+  @media screen and (max-width: 300px) {
+    .myNickNameDark {
+      font-size: 0.8rem; /* Adjust the font size for smaller screens */
+    }
+    .darkBack h1 {
+        font-size: 0.8rem; /* Adjust the font size for smaller screens */
+        
+          }
+  }
+  
