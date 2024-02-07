@@ -8,7 +8,7 @@
     padding: 23px 80px;
     backdrop-filter: blur(10px); /* Adjust the blur as needed for the glass effect */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow for depth */
-    background-color: #B7ADA1 ; /* Use an rgba color with alpha for transparency */
+    background-color: #94a3b8 ; /* Use an rgba color with alpha for transparency */
     z-index: 1000; /* Ensure it's above other elements on the page */
     height: 1rem;
   }

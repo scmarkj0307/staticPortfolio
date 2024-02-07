@@ -13,7 +13,7 @@ body{
   }
   
   body::-webkit-scrollbar-thumb {
-    background-color: #b7ada1; /* Color of the scrollbar thumb */
+    background-color: #94a3b8; /* Color of the scrollbar thumb */
     border-radius: 10px; /* Border radius of the thumb */
   }
   
@@ -52,7 +52,7 @@ body{
   .cursor-content{
     display: flex;
     flex-direction: column;
-    color: #b7ada1;
+    color: #94a3b8;
   }
   
   .cursor-content p {
@@ -210,7 +210,7 @@ body{
     }
     
     .myDpContainer.startAnimation::before {
-      border-color: #B7ADA1 ;
+      border-color: #94a3b8 ;
       animation: borderAnimation 3s infinite alternate;
     }
     
@@ -452,8 +452,8 @@ body{
       height: 550px;
       padding-bottom: 4rem;
       padding-top: 2rem;
-      background-color: #B7ADA1;
-      background: rgba(183, 173, 161, 0.4); /* Adjust the alpha (last) value for transparency */
+      background-color: #94a3b8;
+      background: rgba(169, 181, 201, 0.4); /* Adjust the alpha (last) value for transparency */
       backdrop-filter: blur(10px); /* Adjust the blur value as needed */
       border-radius: 10px; /* Optional: add border-radius for rounded corners */
       margin-top: 2rem;
@@ -474,8 +474,8 @@ body{
       height: 550px;
       padding-bottom: 4rem;
       padding-top: 2rem;
-      background-color: #B7ADA1;
-      background: rgba(183, 173, 161, 0.4); /* Adjust the alpha (last) value for transparency */
+      background-color: #94a3b8;
+      background: rgba(169, 181, 201, 0.4); /* Adjust the alpha (last) value for transparency */
       backdrop-filter: blur(10px); /* Adjust the blur value as needed */
       border-radius: 10px; /* Optional: add border-radius for rounded corners */
       margin-top: 2rem;
@@ -490,6 +490,7 @@ body{
       height: 300px; /* Set a fixed height */
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Add a box shadow for the floating effect */
+      border-radius: 10px;
     }
     
     .swcarousel-container img {
@@ -564,6 +565,7 @@ body{
       height: 300px; /* Set a fixed height */
       overflow: hidden;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Add a box shadow for the floating effect */
+      border-radius: 10px;
   } 
   
   .picarouselLabel{
@@ -891,7 +893,7 @@ body{
     margin: 25px 0 ;
     cursor: pointer;
     align-items: flex-start;
-    color: #B7ADA1;
+    color: #94a3b8;
   }
   
   .info li img {
@@ -909,7 +911,7 @@ body{
     margin-left: 150px;
     width: 500px;
     height: 350px;
-    background-color: #B7ADA1;
+    background-color: #94a3b8;
     background: rgba(183, 173, 161, 0.4); /* Adjust the alpha (last) value for transparency */
     backdrop-filter: blur(10px); /* Adjust the blur value as needed */
     border-radius: 20px; /* Add border-radius for rounded corners */
@@ -969,7 +971,7 @@ body{
   
   /* Change the submit button color on hover */
   .form-submit:hover {
-    background-color: #B7ADA1;
+    background-color: #94a3b8;
   }
   
   
@@ -978,7 +980,7 @@ body{
   }
   
   .cc2 p {
-    color: #B7ADA1;
+    color: #94a3b8;
     position: relative;
     left: 4rem;
     top: 1rem;
@@ -996,10 +998,10 @@ body{
     position: relative;
     width: 30px;
     height: 30px;
-    background: #B7ADA1;
+    background: #94a3b8;
     margin: 0 4px;
     border-radius: 50%;
-    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #B7ADA1, 0 0 100px #B7ADA1;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #B7ADA1, 0 0 100px #94a3b8;
     animation: animateBubbles 15s linear infinite;
     animation-duration: calc(125s / var(--i));
   }
@@ -1180,7 +1182,7 @@ body{
     position: relative;
     background-image:
       linear-gradient(#029791  26px, transparent 0) ,
-      linear-gradient(#B7ADA1  26px, transparent 0) ,
+      linear-gradient(#94a3b8  26px, transparent 0) ,
       linear-gradient(#078ab3  26px, transparent 0) ,
       linear-gradient(#3D5872  26px, transparent 0);
     background-repeat: no-repeat;

@@ -73,7 +73,7 @@ const Cursor = () => {
         ctx.stroke();
       }
       ctx.lineTo(trail[trail.length - 1].x, trail[trail.length - 1].y);
-      ctx.strokeStyle = '#554e46';
+      ctx.strokeStyle = '#94a3b8';
       window.requestAnimationFrame(update);
     };
 
